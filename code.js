@@ -1,12 +1,14 @@
-var x=10;
-var y=2;
-var z=10;
+var iv={
+    x:10,
+    y:2,
+    z:10
+}
 var tree={
-    "condition": function(){return x>5},
+    "condition": function(){return iv.x>5},
     "id": "1",
     "nodes": [
       {
-        "condition": function(){return y>5},
+        "condition": function(){return iv.y>5},
         "id": "2",
         "parentid": "1",
         "nodes": [
@@ -16,7 +18,7 @@ var tree={
             "parentid": "2"
           },
           {
-            "condition": function(){return z<15},
+            "condition": function(){return iv.z<15},
             "id": "5",
             "parentid": "2",
             "nodes": [
@@ -35,7 +37,7 @@ var tree={
         ]
       },
       {
-        "condition": function(){return z>5},
+        "condition": function(){return iv.z>5},
         "id": "3",
         "parentid": "1",
         "nodes": [
@@ -54,8 +56,6 @@ var tree={
     ]
   }
 
-
-  
 function getOutput(JsonTree){
     if(!JsonTree.value){
         
